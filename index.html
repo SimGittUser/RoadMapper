@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- Step 1: Topic Input -->
+        <div class="step active" id="step-1" data-step="1">
+            <h1 class="heading">What do you want<br>to learn?</h1>
+            <div class="input-wrapper">
+                <input type="text" class="topic-input" id="topicInput" placeholder="Type your topic here…" autofocus autocomplete="off" spellcheck="false">
+                <span class="input-underline"></span>
+            </div>
+            <button class="continue-btn" id="continueBtn" disabled>Continue</button>
+            <div class="step-dots">
+                <span class="dot active" data-dot="1"></span>
+                <span class="dot" data-dot="2"></span>
+                <span class="dot" data-dot="3"></span>
+            </div>
+        </div>
+
+        <!-- Step 2: Learning Style -->
+        <div class="step" id="step-2" data-step="2">
+            <h1 class="heading small">Your best<br>learning style?</h1>
+            <div class="btn-group row-layout">
+                <button class="btn" data-choice="video">Video</button>
+                <button class="btn" data-choice="reading">Reading</button>
+            </div>
+            <div class="step-dots">
+                <span class="dot done" data-dot="1"></span>
+                <span class="dot active" data-dot="2"></span>
+                <span class="dot" data-dot="3"></span>
+            </div>
+        </div>
+
+        <!-- Step 3: Summary / Download (reading path only) -->
+        <div class="step" id="step-4" data-step="3">
+            <h1 class="heading small">Here's your summary</h1>
+            <div class="summary-card">
+                <div class="summary-item">
+                    <span class="summary-label">Topic</span>
+                    <span class="summary-value" id="summaryTopic">—</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Learning Style</span>
+                    <span class="summary-value" id="summaryStyle">—</span>
+                </div>
+            </div>
+            <button class="download-btn" id="downloadBtn">Download response.txt</button>
+            <div class="step-dots">
+                <span class="dot done" data-dot="1"></span>
+                <span class="dot done" data-dot="2"></span>
+                <span class="dot active" data-dot="3"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
